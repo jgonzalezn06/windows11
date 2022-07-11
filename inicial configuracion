@@ -9,3 +9,4 @@ Set-PSReadLineOption -PredictionSource History
 Instalar vim 9
 https://github.com/vim/vim-win32-installer/releases
 Set-Alias vim 'C:\Program Files\Vim\vim90\vim.exe'
+function prompt {"PS [$env:USERNAME@$env:COMPUTERNAME $(pwd)] $ "}
