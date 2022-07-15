@@ -1,12 +1,18 @@
-instalar powershell 7 y abrir con administrador
+#instalar powershell  desde store y abrir con administrador
 # dar permisos de ejecucion de script e instalar psreadline
-https://docs.microsoft.com/es-mx/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.2#msi
 Set-ExecutionPolicy Restricted -Scope LocalMachine
 Set-ExecutionPolicy Restricted -Scope currenuser
 Install-Module -Name PSReadLine -AllowClobber -Force
 Set-PSReadLineOption -PredictionSource History
 
-Instalar vim 9
+
+
+#Instalar vim 9
 https://github.com/vim/vim-win32-installer/releases
+
+
+#profile1
+Set-Alias sudo Invoke-Elevated
+function prompt {"[$env:USERNAME@$env:COMPUTERNAME] $ "}
+Set-PSReadLineOption -PredictionSource History
 Set-Alias vim 'C:\Program Files\Vim\vim90\vim.exe'
-function prompt {"PS [$env:USERNAME@$env:COMPUTERNAME $(pwd)] $ "}
