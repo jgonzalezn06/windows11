@@ -1,11 +1,8 @@
 #instalar powershell  desde store y abrir con administrador
 # dar permisos de ejecucion de script e instalar psreadline
-Set-ExecutionPolicy Restricted -Scope LocalMachine
-Set-ExecutionPolicy Restricted -Scope currenuser
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 Install-Module -Name PSReadLine -AllowClobber -Force
 Set-PSReadLineOption -PredictionSource History
-
-
 
 #Instalar vim 9
 https://github.com/vim/vim-win32-installer/releases
